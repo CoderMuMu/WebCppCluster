@@ -1,6 +1,7 @@
 # WebCppCluster
 本仓库为本人的学习类项目，欢迎各位交流学习
-各部分的含义
+
+# 各部分的含义
 webcppcluster2025/
 ├── app.py                    # 主Web应用入口
 ├── service.py                # 服务间通信工具
