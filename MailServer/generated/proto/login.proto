@@ -1,0 +1,13 @@
+syntax = "proto2";
+
+package protorpc;
+
+message LoginParam {
+    optional string  username    = 1;
+    optional string  password    = 2;
+}
+
+message LoginResult {
+    optional uint64  user_id     = 1;
+    optional string  token       = 2;
+}
