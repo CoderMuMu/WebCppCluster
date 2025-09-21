@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+message Sign{
+    int64 userid = 1;
+    int32 signtype = 2;
+    string date = 3;
+}
+
+message Mail{
+    repeated int64 userid = 1;
+    string title = 2;
+    string context = 3;
+    int32 type = 4;
+    string attach = 5;
+    string buttontext = 6;
+    int64 fromuserid = 7;
+}
