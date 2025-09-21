@@ -1,0 +1,24 @@
+2025-09-18 09:27:35|ERROR|Error.py|16|'ThreadedDict' object has no attribute 'save'
+Traceback (most recent call last):
+  File "/home/py/share/webcppcluster2025/Error.py", line 14, in wrapper
+    return func(*args, **kwargs)
+  File "/home/py/share/webcppcluster2025/app.py", line 91, in POST
+    res = Account.HandleLogin(userid, web.config._session)
+  File "/home/py/share/webcppcluster2025/Error.py", line 27, in wrapper
+    res = func(*args, **kwargs)
+  File "/home/py/share/webcppcluster2025/Account.py", line 163, in HandleLogin
+    session.save()  # 显式保存session
+  File "/home/py/.local/lib/python3.10/site-packages/web/session.py", line 84, in __getattr__
+    return getattr(self._data, name)
+AttributeError: 'ThreadedDict' object has no attribute 'save'
+2025-09-18 17:47:26|ERROR|Error.py|16|[Errno 111] Connection refused
+Traceback (most recent call last):
+  File "/home/py/share/webcppcluster2025/Error.py", line 14, in wrapper
+    return func(*args, **kwargs)
+  File "/home/py/share/webcppcluster2025/app.py", line 159, in POST
+    Lobby.SendMail(req)
+  File "/home/py/share/webcppcluster2025/Lobby.py", line 55, in SendMail
+    service.SendSvrd(Config.MAIL_HOST, Config.MAIL_PORT, mailproto.SerializeToString())
+  File "/home/py/share/webcppcluster2025/service.py", line 11, in SendSvrd
+    tcpCliSock.connect(ADDR)
+ConnectionRefusedError: [Errno 111] Connection refused
