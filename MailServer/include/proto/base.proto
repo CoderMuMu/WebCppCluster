@@ -1,0 +1,20 @@
+syntax = "proto2";
+
+package protorpc;
+
+message Error {
+    optional int32   code    = 1;
+    optional string  message = 2;
+}
+
+message Request {
+    optional uint64  id      = 1;
+    optional string  method  = 2;
+    repeated bytes params  = 3;
+}
+
+message Response {
+    optional uint64  id      = 1;
+    optional bytes   result  = 2;
+    optional Error   error   = 3;
+}

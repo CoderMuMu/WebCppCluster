@@ -1,0 +1,18 @@
+syntax = "proto2";
+
+message Sign{
+    optional int64 userid     = 1;
+    optional int32 signtype   = 2;
+    optional string date      = 3;
+}
+
+message Mail{
+    repeated int64 userid   = 1;
+    optional string title   = 2;
+    optional string context = 3;
+    optional int32 type     = 4;
+    optional string attach  = 5;
+    optional string buttontext = 6;
+    optional int32 hasattach = 7;
+    optional int32 getattach = 8;
+}

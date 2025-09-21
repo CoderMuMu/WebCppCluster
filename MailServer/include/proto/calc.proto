@@ -1,0 +1,11 @@
+syntax = "proto2";
+
+package protorpc;
+
+message CalcParam {
+    optional int64   num     = 1;
+}
+
+message CalcResult {
+    optional int64   num     = 1;
+}
