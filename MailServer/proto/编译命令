@@ -1,0 +1,2 @@
+g++ mail_server.cpp protorpc.c ./generated/proto/*.pb.cc -I ./include/hv -I ./include/hiredis -I /usr/include/google/protobuf -I . -lhv -lprotobuf -lhiredis -lpthread -o mail
+./mail 1234
